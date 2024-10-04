@@ -1,0 +1,678 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family:sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: seagreen;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: rgb(83, 139, 87);
+    border-bottom: 3px solid rgb(83, 139, 87);
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-top: 3px solid rgb(83, 139, 87);
+        border-left: 3px solid rgb(83, 139, 87);
+        border-bottom: 3px solid rgb(83, 139, 87);
+        padding: 1rem solid;
+        background-color: #161616;
+        border-bottom-left-radius: 2rem;
+        border-top-left-radius: 2rem;
+
+
+    }
+    nav a{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid rgb(83, 139, 87);
+
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content p{
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: rgb(83, 139, 87);
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgb(83, 139, 87); 
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid rgb(83, 139, 87);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: seagreen;
+}
+
+.social-icons a:hover{
+    color: seashell;
+    transform: scale(1.3) translateY(-5px);
+    background-color: rgb(83, 139, 87);
+    box-shadow: 0 0 25px rgb(83, 139, 87);
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "Software Developer";
+    color: rgb(83, 139, 87);
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid rgb(83, 139, 87);
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Software Developer";
+    }
+    21%, 40%{
+        content: "Web Designer";
+    }
+    41%, 60%{
+        content: "Developer";
+    }
+    61%, 80%{
+        content: "Student";
+    }
+    81%, 100%{
+        content: "Athlete";
+    }
+}
+@media(max-width:1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vh;
+        margin-top: 4rem;
+    }
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 200;
+    background-color: rgba(83, 139, 87, 0.643);
+}  
+
+.blog {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+}
+/* work here*/
+.portfolio-title,
+.resume-title,
+.blog-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 20rem auto 1rem;
+    text-align: center;
+    width: 29%; 
+    height: 14%;
+    border-bottom: solid rgb(83, 139, 87);
+    color: rgb(255, 255, 255);
+}
+
+.blog span {
+    color: rgb(83, 139, 87);
+}
+
+.blog .post-1,
+.blog .post-2,
+.blog .post-3{
+    width: 50%;
+    display: inline-block;
+
+    vertical-align: top;
+    text-align: left;
+    margin: 0 1%;
+    margin-top: 5rem;
+    background-color: rgb(240, 241, 240);
+    box-shadow: 0 4px 8px rgba(6, 6, 6, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.blog .post-1:hover,
+.blog .post-2:hover,
+.blog .post-3:hover {
+    box-shadow: 0 0 25px rgb(83, 139, 87);
+    transform: scale(1.02); 
+}
+
+.blog img {
+    width: 50%;
+    margin-left: 25%;
+    height: 25%;
+    margin-bottom: 1rem;
+}
+
+.blog h2 {
+    font-size: 2rem;
+    color: #333;
+    border-top: solid #333;
+    margin-bottom: 2rem;
+}
+
+
+.blog .description-1,
+.blog .description-2,
+.blog .description-3 {
+    line-height: 1.5; 
+    font-size: 1.5rem; 
+    color: #555; 
+}
+
+.blog .description-1 span,
+.blog .description-2 span,
+.blog .description-3 span {
+    line-height: 1.5; 
+    font-size: 1.7rem; 
+    font-weight: 600;
+    color: seagreen;
+}
+
+
+@media screen and (max-width: 995px) {
+    .blog-title{
+        width: 50%; 
+        height: 10%;
+        border-bottom: solid rgb(83, 139, 87);
+    }
+    .blog{
+        flex-direction: column;
+    }
+    .blog .post-1,
+    .blog .post-2,
+    .blog .post-3 {
+        flex-direction: column; 
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 2rem; 
+    }
+    .blog img {
+        width: auto 2rem;
+        margin-left: 20px;
+        height: 30rem;
+        margin-left: 25%;
+        margin-bottom: 1rem;
+    }
+
+
+}
+.resume-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 550;
+    margin: 6rem auto 4rem;
+    border-radius: 2rem;
+    background-color: rgb(83, 139, 87);
+    width: 20%; 
+    height: 34px;
+    transition: 0.3s ease;
+    color: #333;
+}
+
+.resume-link:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 25px rgb(83, 139, 87);
+}
+
+
+
+.resume-info {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 10rem auto 0; 
+    padding: 50px;
+    background-color: rgb(249, 249, 249);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    min-height: 100; 
+}
+
+.resume-info .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+
+.resume-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.resume-info .entry {
+    margin-bottom: 2rem;
+}
+
+.resume-info .entry-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.resume-info .entry-info {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.resume-info .entry-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+.resume-info .skill-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.resume-info .skill-list li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+@media screen and (max-width: 995px) {
+    .resume-title{
+        width: 70%;
+        height: 12%;
+    }
+    .resume-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7rem;
+        font-weight: 550;
+        margin: 6rem auto 4rem;
+        border-radius: 2rem;
+        width: 40%; 
+        height: 34px;
+
+        color: #333;
+    }
+    .resume-info {
+        padding: 1rem;
+    }
+    
+    .resume-info .section-title {
+        font-size: 1.5rem;
+    }
+
+    .resume-info .entry-title {
+        font-size: 1.2rem;
+    }
+
+    .resume-info .skill-list {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+.contact {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20vb auto 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: solid rgba(83, 139, 87, 0.867);
+    transition: 0.3s ease;
+}
+.contact:hover{
+    box-shadow: 0 0 25px rgb(83, 139, 87);
+    transform: scale(1.01);
+}
+
+
+.contact h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+
+.contact p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#contact-form label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #444;
+    align-self: flex-start;
+}
+
+
+#contact-form input[type="text"],
+#contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+#submit {
+    background-color: #4CAF50;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: rgb(83, 139, 87);
+    color: white;
+}
+
+
+@media screen and (max-width: 995px) {
+    .contact {
+        padding: 30rem auto 0;
+        margin: 30vb auto 0;
+    }
+    
+    #contact-form input[type="text"],
+    #contact-form textarea {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    .project {
+        flex-direction: column; /* Stack projects vertically */
+        align-items: center; /* Center align project details */
+        padding: 20px;
+    }
+
+    .project-image {
+        width: 100%; /* Make image responsive to screen width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Add spacing between image and details */
+    }
+
+    .project-details {
+        width: 100%; /* Make the project details take full width */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .project-name {
+        font-size: 1.5rem; /* Slightly reduce the size of the project name */
+    }
+
+    .project-description {
+        font-size: 1rem; /* Adjust text size for better readability */
+    }
+
+    .project-link {
+        padding: 12px 24px; /* Adjust padding for buttons */
+        font-size: 1rem; /* Slightly larger text for the button */
+    }
+}
+
+
+
+
+
+
+
+
+.project {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(240, 243, 240);
+    margin: 2rem auto;
+    padding: 20px;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.project:hover{
+    transform: scale(1.01);
+    box-shadow: 0 0 10px;
+}
+
+.project-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.project-details {
+    flex: 1;
+    text-align: left;
+}
+
+.project-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.5s ease;
+
+}
+
+.project-link:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
